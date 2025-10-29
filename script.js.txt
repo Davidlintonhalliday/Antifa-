@@ -1,0 +1,12 @@
+// Simple form submission handler
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    const message = document.getElementById('formMessage');
+    message.textContent = `Thank you, ${name}! We will contact you at ${email}.`;
+
+    // Reset form
+    this.reset();
+});
